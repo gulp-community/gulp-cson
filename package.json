@@ -1,0 +1,42 @@
+{
+  "name": "gulp-cson",
+  "description": "Parse cson with gulp",
+  "version": "0.0.1",
+  "homepage": "http://github.com/stevelacy/gulp-cson",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/stevelacy/gulp-cson.git"
+  },
+  "author": "Steve Lacy <me@slacy.me> (http://slacy.me)",
+  "main": "./index.js",
+  "dependencies": {
+    "map-stream": "^0.1.0",
+    "coffee-script": "^1.7.1",
+    "replace-ext": "0.0.1",
+    "cson": "^1.4.5"
+  },
+  "devDependencies": {
+    "gulp-util": "*",
+    "mocha": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register --reporter spec"
+  },
+  "engines": {
+    "node": ">= 0.9.0"
+  },
+  "keywords": [
+    "gulp",
+    "cson",
+    "json",
+    "gulpplugin",
+    "gulp-plugin"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/stevelacy/gulp-cson/raw/master/LICENSE"
+    }
+  ]
+}
