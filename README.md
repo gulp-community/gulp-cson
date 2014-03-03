@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/stevelacy/gulp-cson.png?branch=master)](https://travis-ci.org/stevelacy/gulp-cson)
 [![NPM version](https://badge.fury.io/js/gulp-cson.png)](http://badge.fury.io/js/gulp-cson)
 
->  All options are passed to [CSOM](https://github.com/bevry/cson) any output issues should be opened there
+>  All options are passed to [CSON](https://github.com/bevry/cson) any output issues should be opened there
 
 <table>
 <tr> 
