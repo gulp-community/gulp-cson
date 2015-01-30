@@ -14,7 +14,7 @@ describe "gulp-cson", ->
       cwd: "test/"
       path: "test/fixtures/normal.cson"
       contents: fs.readFileSync path.join __dirname, "/fixtures/normal.cson"
-    
+
     myFunction.once "data", (newFile) ->
       should.exist newFile
       should.exist newFile.contents

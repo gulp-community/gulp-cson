@@ -10,10 +10,10 @@
   "author": "Steve Lacy <me@slacy.me> (http://slacy.me)",
   "main": "./index.js",
   "dependencies": {
+    "coffee-script": "^1.9.0",
+    "cson": "^1.6.2",
     "map-stream": "^0.1.0",
-    "coffee-script": "^1.7.1",
-    "replace-ext": "0.0.1",
-    "cson": "^1.4.5"
+    "replace-ext": "0.0.1"
   },
   "devDependencies": {
     "gulp-util": "*",
