@@ -1,7 +1,7 @@
 {
   "name": "gulp-cson",
   "description": "Parse cson with gulp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "http://github.com/stevelacy/gulp-cson",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
   "main": "./index.js",
   "dependencies": {
     "coffee-script": "^1.9.0",
-    "cson": "^1.6.2",
+    "cson": "^2.0.0",
     "map-stream": "^0.1.0",
     "replace-ext": "0.0.1"
   },
