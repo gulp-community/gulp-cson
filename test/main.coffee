@@ -18,6 +18,7 @@ describe "gulp-cson", ->
     myFunction.once "data", (newFile) ->
       should.exist newFile
       should.exist newFile.contents
+      should.equal newFile.path, 'test/fixtures/normal.json'
       String(newFile.contents).should.equal String fs.readFileSync path.join __dirname, "/expected/normal.json"
       done()
 
