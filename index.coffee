@@ -8,7 +8,7 @@ module.exports = (options) ->
 
   gcson = (file, cb) ->
     json = cson.parse file.contents.toString(), options
-    return cb err if json instanceof Error
+    return cb json if json instanceof Error
     file.contents = new Buffer JSON.stringify json
     file.path = rext file.path, '.json'
 
