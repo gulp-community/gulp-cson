@@ -23,3 +23,19 @@ describe "gulp-cson", ->
       done()
 
     myFunction.write fakeFile
+
+  it "should return error on error", (done) ->
+    myFunction = gcson()
+    fakeFile = new gutil.File
+      base: "test/fixtures"
+      cwd: "test/"
+      path: "test/fixtures/normal.cson"
+      contents: fs.readFileSync path.join __dirname, "/fixtures/error.cson"
+
+    myFunction.once "error", (err) ->
+      should.exist err
+      should.equal String(err.message), "[stdin]:12:1: error: unmatched }\n\u001b[1;31m}\u001b[0m\n\u001b[1;31m^\u001b[0m"
+
+      done()
+
+    myFunction.write fakeFile
