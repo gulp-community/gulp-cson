@@ -5,7 +5,7 @@
 >  All options are passed to [CSON](https://github.com/bevry/cson) any output issues should be opened there
 
 <table>
-<tr> 
+<tr>
 <td>Package</td><td>gulp-cson</td>
 </tr>
 <tr>
