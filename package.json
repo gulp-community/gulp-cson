@@ -1,7 +1,7 @@
 {
   "name": "gulp-cson",
   "description": "Parse cson with gulp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "http://github.com/stevelacy/gulp-cson",
   "repository": {
     "type": "git",
