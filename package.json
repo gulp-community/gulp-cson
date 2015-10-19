@@ -33,10 +33,5 @@
     "gulpplugin",
     "gulp-plugin"
   ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/stevelacy/gulp-cson/raw/master/LICENSE"
-    }
-  ]
+  "license": "MIT"
 }
