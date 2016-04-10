@@ -8,6 +8,25 @@ require 'mocha'
 
 describe 'gulp-cson', ->
   it 'should parse cson to json', (done) ->
+    myFunction = gcson(
+      indent: null
+    )
+    fakeFile = new gutil.File
+      base: 'test/fixtures'
+      cwd: 'test/'
+      path: 'test/fixtures/normal.cson'
+      contents: fs.readFileSync path.join __dirname, '/fixtures/normal.cson'
+
+    myFunction.once 'data', (newFile) ->
+      should.exist newFile
+      should.exist newFile.contents
+      should.equal newFile.path.replace(/\\/g, '/'), 'test/fixtures/normal.json'
+      String(newFile.contents).should.equal String fs.readFileSync path.join __dirname, '/expected/normal.json'
+      done()
+
+    myFunction.write fakeFile
+
+  it 'should parse cson to json with indent', (done) ->
     myFunction = gcson()
     fakeFile = new gutil.File
       base: 'test/fixtures'
@@ -18,8 +37,8 @@ describe 'gulp-cson', ->
     myFunction.once 'data', (newFile) ->
       should.exist newFile
       should.exist newFile.contents
-      should.equal newFile.path, 'test/fixtures/normal.json'
-      String(newFile.contents).should.equal String fs.readFileSync path.join __dirname, '/expected/normal.json'
+      should.equal newFile.path.replace(/\\/g, '/'), 'test/fixtures/normal.json'
+      String(newFile.contents).should.equal String fs.readFileSync path.join __dirname, '/expected/normal-indent.json'
       done()
 
     myFunction.write fakeFile
