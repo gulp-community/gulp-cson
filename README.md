@@ -29,50 +29,20 @@
 ```
 npm install gulp-cson --save
 ```
-##Example
+## Example
+```js
+const gulp = require('gulp')
+const gcson = require('../')
 
-#### Default indentation (2 spaces)
-```coffee-script
-gulp = require 'gulp'
-gcson = require 'gulp-cson'
+gulp.task('cson', () => {
+	gulp.src('./normal.cson')
+		.pipe(gcson())
+		.pipe(gulp.dest('./'))
+})
 
-gulp.task 'cson', ->
-  gulp.src './normal.cson'
-    .pipe gcson()
-    .pipe gulp.dest './'
-
-gulp.task 'default', ['cson']
+gulp.task('default', ['cson'])
 ```
 
-#### No indentation
-```coffee-script
-gulp = require 'gulp'
-gcson = require 'gulp-cson'
-
-gulp.task 'cson', ->
-  gulp.src './normal.cson'
-    .pipe gcson(
-      indent: null
-    )
-    .pipe gulp.dest './'
-
-gulp.task 'default', ['cson']
-```
-
-#### With custom indentation
-```coffee
-gulp = require 'gulp'
-gcson = require 'gulp-cson'
-
-gulp.task 'cson', ->
-  gulp.src './normal.cson'
-    .pipe gcson(
-      indent: '\t'
-    )
-    .pipe gulp.dest './'
-
-gulp.task 'default', ['cson']
-```
 
 ####You can view more examples in the [example folder.](https://github.com/stevelacy/gulp-cson/tree/master/examples)
 
