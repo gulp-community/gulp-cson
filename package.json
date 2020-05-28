@@ -12,7 +12,7 @@
   "dependencies": {
     "cson": "^7.5.0",
     "map-stream": "^0.0.7",
-    "replace-ext": "2.0.0"
+    "replace-ext": "^2.0.0"
   },
   "devDependencies": {
     "mocha": "*",
