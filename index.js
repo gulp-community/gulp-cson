@@ -15,7 +15,7 @@ module.exports = function (options) {
     if (json instanceof Error) {
       return cb(json);
     }
-    file.contents = new Buffer(JSON.stringify(json, null, indent));
+    file.contents = Buffer.from(JSON.stringify(json, null, indent));
     file.path = rext(file.path, ".json");
     return cb(null, file);
   };
