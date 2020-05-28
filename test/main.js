@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const should = require('should');
-const gutil = require('gulp-util');
+const Vinyl = require('vinyl');
 const gcson = require('../');
 
 require('mocha');
@@ -11,7 +11,7 @@ describe('gulp-cson', function() {
     const myFunction = gcson({
       indent: null
     });
-    const fakeFile = new gutil.File({
+    const fakeFile = new Vinyl({
       base: 'test/fixtures',
       cwd: 'test/',
       path: 'test/fixtures/normal.cson',
@@ -28,7 +28,7 @@ describe('gulp-cson', function() {
   });
   it('should parse cson to json with indent', function(done) {
     const myFunction = gcson();
-    const fakeFile = new gutil.File({
+    const fakeFile = new Vinyl({
       base: 'test/fixtures',
       cwd: 'test/',
       path: 'test/fixtures/normal.cson',
@@ -45,7 +45,7 @@ describe('gulp-cson', function() {
   });
   return it('should return error on error', function(done) {
     const myFunction = gcson();
-    const fakeFile = new gutil.File({
+    const fakeFile = new Vinyl({
       base: 'test/fixtures',
       cwd: 'test/',
       path: 'test/fixtures/normal.cson',

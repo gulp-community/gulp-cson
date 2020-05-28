@@ -15,9 +15,9 @@
     "replace-ext": "2.0.0"
   },
   "devDependencies": {
-    "gulp-util": "*",
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "vinyl": "*"
   },
   "scripts": {
     "test": "mocha --reporter spec"
